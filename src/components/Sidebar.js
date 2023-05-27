@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
+
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import styled from 'styled-components';
@@ -15,7 +15,10 @@ export default function BasicList() {
     <Container>
 
     
-    <Box sx={{ width: '100%', bgcolor: '#2b2c37', height:"100%" }}>
+      <Box sx={{
+        width: '100%', bgcolor: '#2b2c37', height: "100%", color: "white",
+        
+      }}>
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
@@ -42,10 +45,12 @@ export default function BasicList() {
 }
 
 const Container = styled.div`
-  width: 250px;
-  margin-top: 100px;
-  height: 100vh
+background-color: #2b2c37;
+z-index: 1;
+position: sticky;
+top: 0;
+height: 100vh;
+width: 100%;
 
+border-top: none`;
 
-  
-  `

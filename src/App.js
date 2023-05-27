@@ -1,31 +1,42 @@
-
-import './App.css';
-import Sidebar from './components/Sidebar';
+import React from 'react';
+import { AppBar, Toolbar, Drawer, Typography, Grid } from '@mui/material';
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import styled from 'styled-components';
+import Main from './components/Main';
 
+const drawerWidth = 200;
 
 function App() {
   return (
-    <MainContainer>
-      <NavBox>
-        <NavbarContainer ><Navbar/></NavbarContainer>
-      </NavBox>
-      <MainBox>
-      <SidebarContainer ><Sidebar/></SidebarContainer>
-        <InContainer></InContainer>
-        </MainBox>
-   </MainContainer>
+    <>
+      {/* Navbar */}
+      <Navbar />
+
+      
+      <Grid container spacing={2}>
+        <Grid item xs={2}>
+          <Sidebar />
+        </Grid>
+        <Grid item xs={10} sx={{
+          backgroundColor: "#20212c",
+        }}>
+          <Main />
+          
+          </Grid>
+
+      </Grid>
+
+      
+       
+        
+       
+     
+      
+    </>
   );
 }
 
 export default App;
 
-
-const MainContainer = styled.div``;
-const NavbarContainer = styled.div``;
-const SidebarContainer = styled.div``;
-const InContainer = styled.div``;
-const NavBox = styled.div``;
-const MainBox = styled.div``;
 

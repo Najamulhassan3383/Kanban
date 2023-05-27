@@ -10,13 +10,13 @@ import logo from "../components/images/logo.svg";
 function Navbar() {
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
       sx={{
-        zIndex: (theme) => theme.zIndex.drawer + 1,
+        zIndex: (theme) => theme.zIndex.drawer + 4,
         color: "#fff",
         backgroundColor: "#2b2c37",
         boxShadow: "none",
-        borderBottom: "1px solid #e0e0e0",
+        
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
